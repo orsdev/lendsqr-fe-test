@@ -1,7 +1,39 @@
+@use 'sass:map';
+
 $breakpoints: (
+  'xs': 500px,
   'sm': 768px,
+  '2sm': 900px,
   'md': 1024px,
   'lg': 1920px
-) !default;
+);
 
-@import '../../../node_modules/include-media/dist/include-media';
+@mixin media($breakpoint, $symbol) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if $value {
+    @if $symbol == '<' {
+      @media (max-width: $value) {
+        @content;
+      }
+    }
+
+    @if $symbol == '>' {
+      @media (min-width: $value) {
+        @content;
+      }
+    }
+  } @else {
+    @if $symbol == '<' {
+      @media (max-width: #{$breakpoint}#{'px'}) {
+        @content;
+      }
+    }
+
+    @if $symbol == '>' {
+      @media (min-width: #{$breakpoint}#{'px'}) {
+        @content;
+      }
+    }
+  }
+}
