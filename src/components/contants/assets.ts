@@ -1,6 +1,8 @@
 import Logo from '../../assets/images/logo.svg'
+import AvatarSM from '../../assets/images/avatar.png'
 
 // ICONS
+import Bell from '../../assets/icons/bell.png'
 import Briefcase from '../../assets/icons/briefcase.png'
 import Home from '../../assets/icons/home.png'
 import Group from '../../assets/icons/group.png'
@@ -25,9 +27,11 @@ import Division from '../../assets/icons/division.png'
 import Log from '../../assets/icons/log.png'
 
 export {
+  AvatarSM,
   Home,
   Bank,
   Bar,
+  Bell,
   Briefcase,
   Coins,
   Division,
