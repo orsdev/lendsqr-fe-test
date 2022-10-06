@@ -1,14 +1,22 @@
-import Sidebar from 'components/Sidebar/Index'
+import AppLayout from 'components/Layout/Layout'
 
 const Dashboard = () => {
   return (
-    <div>
-      <Sidebar />
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ratione
-      maiores temporibus voluptatem nihil quos ducimus adipisci architecto amet
-      fuga odit possimus, modi assumenda mollitia magnam. Voluptatibus nihil
-      vero adipisci.
-    </div>
+    <>
+      <AppLayout>
+        <h1
+          style={{
+            fontSize: '40px',
+            height: '500px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          Dashboard
+        </h1>
+      </AppLayout>
+    </>
   )
 }
 
