@@ -1,7 +1,11 @@
+@use 'sass:map';
+
 $zIndexes: (
+  'hide': -1,
   'base': 10,
   'nav': 20,
-  'modal': 30,
+  'sidebar': 30,
+  'modal': 40,
   'overlay': 50
 );
 
