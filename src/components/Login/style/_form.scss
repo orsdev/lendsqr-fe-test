@@ -1,0 +1,115 @@
+.login__form {
+  font-family: $font-avenir-next;
+  position: relative;
+
+  &__title {
+    @extend %font-40;
+
+    color: $color-dark-blue;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 55px;
+  }
+
+  &__info {
+    @extend %font-20;
+
+    color: $color-faded-blue;
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  &--form {
+    margin-top: 60px;
+    width: 100%;
+  }
+
+  &__group {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  &__input--wrapper {
+    @extend %flex-center;
+
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    @extend %font-14;
+
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    border-radius: 5px;
+    display: inline-block;
+    height: 100%;
+    padding: 0 1.6rem;
+    width: 100%;
+
+    &::placeholder {
+      opacity: 0.6;
+    }
+
+    &:focus-visible {
+      border: 2.5px solid rgba(84, 95, 125, 0.15);
+      outline: none;
+    }
+  }
+
+  &__error {
+    border-color: red;
+    background-color: #ff787547;
+
+    &::placeholder {
+      color: red;
+    }
+
+    &:focus-visible {
+      border-color: red;
+    }
+  }
+
+  &__error--message {
+    @extend %font-14;
+
+    display: inline-block;
+    color: red;
+    margin-top: 5px;
+  }
+
+  &__link {
+    @extend %font-12;
+
+    color: $color-sky-blue;
+    cursor: pointer !important;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    &:hover {
+      color: darken($color-sky-blue, 5%);
+      transition: color 0.3s;
+    }
+  }
+
+  &__button {
+    @extend %font-14;
+
+    background-color: $color-sky-blue;
+    border-radius: 8px;
+    color: $color-white;
+    font-family: inherit;
+    font-weight: 600;
+    height: 48px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      background-color: darken($color-sky-blue, 5%);
+      color: $color-white;
+    }
+  }
+}
