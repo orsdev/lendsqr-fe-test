@@ -28,6 +28,10 @@
   margin-bottom: 100px;
   width: 173.76px;
 
+  @include media('xs', '<') {
+    margin-bottom: 60px;
+  }
+
   img {
     width: 100%;
     height: 100%;
