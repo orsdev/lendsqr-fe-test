@@ -8,8 +8,16 @@ interface IProps {
 const PasswordButton = ({ type, onClick }: IProps) => {
   return (
     <div className="password__button">
-      {type === 'password' && <button onClick={onClick}>Show</button>}
-      {type === 'text' && <button onClick={onClick}>Hide</button>}
+      {type === 'password' && (
+        <button type="button" onClick={onClick}>
+          Show
+        </button>
+      )}
+      {type === 'text' && (
+        <button type="button" onClick={onClick}>
+          Hide
+        </button>
+      )}
     </div>
   )
 }
