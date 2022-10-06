@@ -2,7 +2,7 @@ import { useState } from 'react'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
 import cn from 'clsx'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Button } from 'antd'
 import PasswordButton from './PasswordButton'
 
@@ -12,6 +12,7 @@ const ValidationSchema = Yup.object({
 })
 
 const LoginForm = () => {
+  const navigate = useNavigate()
   const [inputType, setInputType] = useState<'password' | 'text'>('password')
 
   const formik = useFormik({
@@ -21,7 +22,7 @@ const LoginForm = () => {
     },
     validationSchema: ValidationSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2))
+      navigate('/dashboard/users')
     }
   })
 

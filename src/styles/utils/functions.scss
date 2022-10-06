@@ -1,0 +1,16 @@
+$zIndexes: (
+  'base': 10,
+  'nav': 20,
+  'modal': 30,
+  'overlay': 50
+);
+
+@function zIndex($name) {
+  $value: map.get($zIndexes, $name);
+  @if $value {
+    @return $value;
+  } @else {
+    @warn 'There is no item "#{$name}" in this list; Choose one of: #{$zIndexes}';
+    @return 0;
+  }
+}
