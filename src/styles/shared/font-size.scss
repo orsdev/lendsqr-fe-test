@@ -1,5 +1,5 @@
 %font-40 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 12vw, 4rem);
 }
 
 %font-24 {
@@ -16,4 +16,7 @@
 
 %font-14 {
   font-size: 1.4rem;
+}
+%font-12 {
+  font-size: 1.2rem;
 }
