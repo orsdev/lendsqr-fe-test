@@ -7,7 +7,7 @@ import {
   CustomersMenuNavigation,
   SettingsMenuNavigation
 } from './contants'
-import { Briefcase, Home } from 'components/contants/assets'
+import { Briefcase, Home, Logo } from 'components/contants/assets'
 
 const activeNavigation = (pathname: string, route: string) =>
   pathname.includes(route)
@@ -24,14 +24,21 @@ const Sidebar = () => {
         onClick={() => setShowSidebar(false)}
       />
       <div className="sidebar sidebar__fixed" data-show={showSidebar}>
-        <div className="sidebar__head" />
-        <div className="sidebar__toggle__close">
-          <button
-            className="sidebar__toggle__close__button"
-            onClick={() => setShowSidebar(false)}
-          >
-            <i className="fa fa-arrow-left" aria-hidden="true"></i>
-          </button>
+        <div className="sidebar__head">
+          <div className="sidebar__toggle__close">
+            <button
+              className="sidebar__toggle__close__button"
+              onClick={() => setShowSidebar(false)}
+            >
+              <i className="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div className="sidebar__brand">
+            <Link to="/dashboard">
+              <img src={Logo} alt="Lendsqr Logo" />
+            </Link>
+          </div>
         </div>
 
         <div className="sidebar__element">
@@ -93,10 +100,10 @@ const Sidebar = () => {
                 key={title}
               >
                 <Link to={route}>
-                  <a className="sidebar__navigation__link">
+                  <span className="sidebar__navigation__link">
                     <img src={icon} alt="Icon" />
                     <span className="inline-block ml-4">{title}</span>
-                  </a>
+                  </span>
                 </Link>
               </li>
             ))}
@@ -115,10 +122,10 @@ const Sidebar = () => {
                 key={title}
               >
                 <Link to={route}>
-                  <a className="sidebar__navigation__link">
+                  <span className="sidebar__navigation__link">
                     <img src={icon} alt="Icon" />
                     <span className="inline-block ml-4">{title}</span>
-                  </a>
+                  </span>
                 </Link>
               </li>
             ))}
@@ -137,10 +144,10 @@ const Sidebar = () => {
                 key={title}
               >
                 <Link to={route}>
-                  <a className="sidebar__navigation__link">
+                  <span className="sidebar__navigation__link">
                     <img src={icon} alt="Icon" />
                     <span className="inline-block ml-4">{title}</span>
-                  </a>
+                  </span>
                 </Link>
               </li>
             ))}

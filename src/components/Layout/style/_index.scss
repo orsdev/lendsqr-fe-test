@@ -1,0 +1,7 @@
+.layout__content {
+  padding: 50px;
+
+  @include media('md', '>') {
+    margin-left: 270px;
+  }
+}
