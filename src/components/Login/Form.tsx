@@ -50,7 +50,7 @@ const LoginForm = () => {
             />
           </div>
           {(formik.touched.email ?? false) && Boolean(formik.errors.email) ? (
-            <span className="login__form__error--message">
+            <span className="login__form__error--message" role="alert">
               {formik.errors.email}
             </span>
           ) : null}
@@ -84,7 +84,7 @@ const LoginForm = () => {
           </div>
           {(formik.touched.password ?? false) &&
           Boolean(formik.errors.password) ? (
-            <span className="login__form__error--message">
+            <span className="login__form__error--message" role="alert">
               {formik.errors.password}
             </span>
           ) : null}
@@ -97,10 +97,8 @@ const LoginForm = () => {
         <div>
           <Button
             type="default"
+            htmlType="submit"
             className="login__form__button"
-            onClick={() => {
-              void formik.submitForm()
-            }}
           >
             Log in
           </Button>
