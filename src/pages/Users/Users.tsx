@@ -1,12 +1,10 @@
 import AppLayout from 'components/Layout/Layout'
+import { Stats } from 'components/Users'
 
 const Users = () => {
   return (
     <AppLayout>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae minus
-      illum magni in, nostrum voluptates optio, nemo aperiam est, aliquid
-      similique qui. Consequatur, officiis explicabo error temporibus sequi
-      praesentium neque?
+      <Stats />
     </AppLayout>
   )
 }

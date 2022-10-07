@@ -26,6 +26,11 @@ import Preferences from '../../assets/icons/preferences.png'
 import Division from '../../assets/icons/division.png'
 import Log from '../../assets/icons/log.png'
 
+import UsersOverlay from '../../assets/icons/users-overlay.png'
+import GroupOverlay from '../../assets/icons/group-overlay.png'
+import NoteOverlay from '../../assets/icons/note-overlay.png'
+import CoinOverlay from '../../assets/icons/coin-overlay.png'
+
 export {
   AvatarSM,
   Home,
@@ -33,21 +38,25 @@ export {
   Bar,
   Bell,
   Briefcase,
+  CoinOverlay,
   Coins,
   Division,
   Galaxy,
   Group,
+  GroupOverlay,
   Loans,
   Log,
   Logo,
+  NoteOverlay,
   Preferences,
   Request,
   Savings,
   Shake,
   Transactions,
-  Users,
   UserCheck,
   UserCog,
   UserMinus,
+  Users,
+  UsersOverlay,
   Scroll
 }

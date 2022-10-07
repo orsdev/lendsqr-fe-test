@@ -1,0 +1,46 @@
+.users__stats {
+  &__title {
+    @extend %font-24;
+
+    color: $color-dark-blue;
+    font-weight: 500;
+  }
+
+  &__content {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 40px;
+
+    @include media('xs', '<') {
+      grid-template-columns: minmax(150px, 100%);
+    }
+  }
+
+  &__card {
+    background: $color-white;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 20px 30px;
+  }
+
+  &__card--type {
+    @extend %font-14;
+
+    color: $color-faded-blue;
+    font-weight: 500;
+    line-height: 16px;
+    margin-top: 14px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  &__card--value {
+    @extend %font-24;
+
+    color: $color-dark-blue;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
