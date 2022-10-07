@@ -4,4 +4,9 @@
   @include media('md', '>') {
     margin-left: 270px;
   }
+
+  @include media('xs', '<') {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
