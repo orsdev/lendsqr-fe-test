@@ -31,7 +31,12 @@ import GroupOverlay from '../../assets/icons/group-overlay.png'
 import NoteOverlay from '../../assets/icons/note-overlay.png'
 import CoinOverlay from '../../assets/icons/coin-overlay.png'
 
+import Prev from '../../assets/icons/prev.png'
+import Next from '../../assets/icons/next.png'
+import ArrowDown from '../../assets/icons/down.png'
+
 export {
+  ArrowDown,
   AvatarSM,
   Home,
   Bank,
@@ -47,8 +52,10 @@ export {
   Loans,
   Log,
   Logo,
+  Next,
   NoteOverlay,
   Preferences,
+  Prev,
   Request,
   Savings,
   Shake,
