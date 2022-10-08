@@ -1,0 +1,174 @@
+.users__table {
+  background: #fbfbfb !important;
+  border-bottom: 0;
+  border-radius: 4px;
+
+  // Override ant-design table heading styling
+  th {
+    background-color: $color-white !important;
+    border-top: 1px solid rgba(33, 63, 125, 0.06);
+
+    &:first-child {
+      border-left: 1px solid rgba(33, 63, 125, 0.06);
+    }
+
+    &:last-child {
+      border-right: 1px solid rgba(33, 63, 125, 0.06);
+    }
+
+    &::before {
+      background-color: transparent !important;
+    }
+  }
+
+  td {
+    background: $color-white;
+
+    &:first-child {
+      border-left: 1px solid rgba(33, 63, 125, 0.06);
+    }
+
+    &:last-child {
+      border-right: 1px solid rgba(33, 63, 125, 0.06);
+    }
+  }
+}
+
+.users__table__wrapper {
+  margin-top: 40px;
+}
+
+.users__table--th {
+  @extend %font-12;
+
+  color: $color-dark-blue;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.users__table--td {
+  @extend %font-12;
+
+  color: $color-faded-blue;
+  font-weight: 400;
+}
+
+.users__table--td-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.users__table__pagination {
+  align-items: center;
+  background-color: transparent;
+  padding-right: 16px;
+  height: 50px;
+  position: relative;
+
+  @include media('md', '>') {
+    top: -70px;
+  }
+
+  // Override ant-design table heading styling
+  .ant-pagination-item {
+    @extend %font-16;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: $color-faded-blue;
+    display: flex;
+    justify-content: center;
+    outline: none;
+
+    a {
+      color: inherit;
+      opacity: 0.6;
+    }
+
+    @include media('base', '<') {
+      font-size: 12px;
+
+      height: 25px;
+      min-width: 25px;
+      width: 25px;
+    }
+  }
+
+  // Override ant-design table heading styling
+  .ant-pagination-item-active {
+    a {
+      opacity: 1;
+    }
+  }
+
+  // Override ant-design table heading styling
+  .ant-pagination-disabled {
+    opacity: 0.5;
+  }
+
+  // Override ant-design table heading styling
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    height: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    width: 24px;
+  }
+
+  // Override ant-design table heading styling
+  button.ant-pagination-item-link {
+    align-items: center;
+    background: rgba(33, 63, 125, 0.1);
+    border-radius: 4px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+
+    .fa {
+      font-size: 14px;
+    }
+  }
+}
+
+.users__table__footer {
+  position: relative;
+  z-index: zIndex('base');
+
+  &--total {
+    @extend %font-14;
+
+    align-items: center;
+    color: $color-faded-blue;
+    display: flex;
+    font-weight: 400;
+  }
+
+  &--dropdown {
+    @extend %font-14;
+
+    align-items: center;
+    background: rgba(33, 63, 125, 0.1);
+    border-radius: 4px;
+    color: $color-dark-blue;
+    display: flex;
+    font-weight: 500;
+    height: 30px;
+    justify-content: center;
+    margin: 0 5px;
+    width: 70px;
+  }
+
+  &--dropdown-inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    img {
+      vertical-align: text-bottom;
+    }
+  }
+}
