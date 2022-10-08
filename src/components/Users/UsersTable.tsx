@@ -97,82 +97,88 @@ const UsersTable = () => {
         dataSource={users}
         loading={isLoading}
         scroll={{ x: 900 }}
-        footer={() => (
-          <div className="users__table__footer">
-            <div className="users__table__footer--total">
-              <span>Showing</span>
-              <Dropdown
-                trigger={['click']}
-                overlay={
-                  <Menu
-                    selectable
-                    defaultSelectedKeys={['1']}
-                    selectedKeys={[pageSize.toString()]}
-                    onSelect={(info) => {
-                      const { key } = info
-                      if (key.length > 0) {
-                        const toNumber = +key
+        footer={() => {
+          if (users?.length === 0) return
 
-                        setPageSize(toNumber)
-                      }
-                    }}
-                    items={[
-                      {
-                        key: '9',
-                        label: '9'
-                      },
-                      {
-                        key: '20',
-                        label: '20'
-                      },
-                      {
-                        key: '50',
-                        label: '50'
-                      },
-                      {
-                        key: '100',
-                        label: '100'
-                      }
-                    ]}
-                  />
-                }
-                className="users__table__footer--dropdown"
-              >
-                <div className="users__table__footer--dropdown-inner">
-                  <span>{pageSize}</span>
-                  <span>
-                    <img src={ArrowDown} alt="Expand" />
-                  </span>
-                </div>
-              </Dropdown>
-              <span>out of {users?.length}</span>
+          return (
+            <div className="users__table__footer">
+              <div className="users__table__footer--total">
+                <span>Showing</span>
+                <Dropdown
+                  trigger={['click']}
+                  overlay={
+                    <Menu
+                      selectable
+                      defaultSelectedKeys={['1']}
+                      selectedKeys={[pageSize.toString()]}
+                      onSelect={(info) => {
+                        const { key } = info
+                        if (key.length > 0) {
+                          const toNumber = +key
+
+                          setPageSize(toNumber)
+                        }
+                      }}
+                      items={[
+                        {
+                          key: '9',
+                          label: '9'
+                        },
+                        {
+                          key: '20',
+                          label: '20'
+                        },
+                        {
+                          key: '50',
+                          label: '50'
+                        },
+                        {
+                          key: '100',
+                          label: '100'
+                        }
+                      ]}
+                    />
+                  }
+                  className="users__table__footer--dropdown"
+                >
+                  <div className="users__table__footer--dropdown-inner">
+                    <span>{pageSize}</span>
+                    <span>
+                      <img src={ArrowDown} alt="Expand" />
+                    </span>
+                  </div>
+                </Dropdown>
+                <span>out of {users?.length}</span>
+              </div>
             </div>
-          </div>
-        )}
-        pagination={{
-          total: users?.length,
-          pageSize,
-          showSizeChanger: false,
-          position: ['bottomRight'],
-          className: 'users__table__pagination',
-          itemRender: (_: any, type: string, originalElement: any) => {
-            if (type === 'prev') {
-              return (
-                <button className="ant-pagination-item-link">
-                  <img src={Prev} alt="Previous" />
-                </button>
-              )
-            }
-            if (type === 'next') {
-              return (
-                <button className="ant-pagination-item-link">
-                  <img src={Next} alt="Next" />
-                </button>
-              )
-            }
-            return originalElement
-          }
+          )
         }}
+        pagination={
+          users?.length > 0 && {
+            total: users?.length,
+            pageSize,
+            showSizeChanger: false,
+            position: ['bottomRight'],
+            className: 'users__table__pagination',
+            itemRender: (_: any, type: string, originalElement: any) => {
+              if (type === 'prev') {
+                return (
+                  <button className="ant-pagination-item-link">
+                    <img src={Prev} alt="Previous" />
+                  </button>
+                )
+              }
+              if (type === 'next') {
+                return (
+                  <button className="ant-pagination-item-link">
+                    <img src={Next} alt="Next" />
+                  </button>
+                )
+              }
+              return originalElement
+            }
+          }
+        }
       />
     </div>
   )
