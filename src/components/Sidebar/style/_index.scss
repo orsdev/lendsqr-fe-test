@@ -51,20 +51,15 @@
     align-items: center;
     display: flex;
     padding: 14px 0;
-    height: 65px;
     padding-left: 28px;
     position: relative;
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     min-width: 100%;
 
     @include media('xs', '<') {
       height: 80px;
       margin-bottom: 30px;
-    }
-
-    @include media('md', '>') {
-      display: none;
     }
   }
 
