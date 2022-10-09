@@ -3,7 +3,7 @@
   border-bottom: 0;
   border-radius: 4px;
 
-  // Override ant-design table heading styling
+  // Override ant-design tablestyling
   th {
     background-color: $color-white !important;
     border-top: 1px solid rgba(33, 63, 125, 0.06);
@@ -21,6 +21,18 @@
     }
   }
 
+  // Override ant-design table styling
+  .ant-table-filter-column {
+    justify-content: flex-start;
+  }
+
+  // Override ant-design table styling
+  .ant-table-column-title {
+    flex: none;
+    margin-right: 3px;
+  }
+
+  // Override ant-design table styling
   td {
     background: $color-white;
 
@@ -32,6 +44,13 @@
       border-right: 1px solid rgba(33, 63, 125, 0.06);
     }
   }
+}
+
+.users__table__header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .users__table__wrapper {
@@ -51,6 +70,39 @@
 
   color: $color-faded-blue;
   font-weight: 400;
+  word-break: break-all;
+}
+
+.users__table--td-transform {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.users__table--td-tag {
+  border-radius: 100px;
+  display: inline-block;
+  min-width: 70px;
+  padding: 7px 8px;
+}
+
+.users__table--td-active {
+  background: rgba(57, 205, 99, 0.1);
+  color: #39cd62;
+}
+
+.users__table--td-pending {
+  background: rgba(233, 179, 0, 0.1);
+  color: #e9b200;
+}
+
+.users__table--td-inactive {
+  background: rgba(84, 95, 125, 0.1);
+  color: #545f7d;
+}
+
+.users__table--td-blacklisted {
+  background: rgba(228, 3, 59, 0.1);
+  color: #e4033b;
 }
 
 .users__table--td-button {
@@ -58,6 +110,12 @@
   border: none;
   cursor: pointer;
   outline: none;
+}
+
+.users__table--td-navigate {
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .users__table__pagination {
@@ -71,7 +129,7 @@
     top: -70px;
   }
 
-  // Override ant-design table heading styling
+  // Override ant-design table  styling
   .ant-pagination-item {
     @extend %font-16;
     align-items: center;
@@ -96,19 +154,19 @@
     }
   }
 
-  // Override ant-design table heading styling
+  // Override ant-design table styling
   .ant-pagination-item-active {
     a {
       opacity: 1;
     }
   }
 
-  // Override ant-design table heading styling
+  // Override ant-design table styling
   .ant-pagination-disabled {
     opacity: 0.5;
   }
 
-  // Override ant-design table heading styling
+  // Override ant-design table styling
   .ant-pagination-prev,
   .ant-pagination-next {
     height: 24px;
@@ -117,7 +175,7 @@
     width: 24px;
   }
 
-  // Override ant-design table heading styling
+  // Override ant-design table styling
   button.ant-pagination-item-link {
     align-items: center;
     background: rgba(33, 63, 125, 0.1);
@@ -130,6 +188,48 @@
     .fa {
       font-size: 14px;
     }
+  }
+}
+
+.users__table__action {
+  &-dropdown {
+    background-color: $color-white;
+    border: 1px solid rgba(84, 95, 125, 0.04);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 20px 21px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 160px;
+  }
+
+  &__item {
+    @extend %font-12;
+
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: $color-faded-blue;
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 15px;
+    outline: none;
+
+    &:hover {
+      transition: color 0.3s;
+
+      color: darken($color-faded-blue, 20%);
+    }
+  }
+
+  button {
+    @extend %font-12;
+
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
   }
 }
 

@@ -1,0 +1,134 @@
+.filter__dropdown {
+  background: $color-white;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  max-width: 250px;
+  padding: 30px 20px;
+
+  &__input {
+    margin-bottom: 20px;
+
+    label {
+      @extend %font-14;
+
+      color: $color-dark-blue;
+      display: inline-block;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    input {
+      @extend %font-14;
+
+      background: #ffffff;
+      border: 1px solid #21407d1c;
+      border-radius: 8px;
+      color: $color-dark-blue;
+      font-weight: 400;
+      height: 40px;
+      padding: 12px 20px;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid #21407d51;
+        box-shadow: none;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $color-faded-blue;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__select {
+    margin-bottom: 20px;
+
+    label {
+      @extend %font-14;
+
+      color: $color-dark-blue;
+      display: inline-block;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    select {
+      @extend %font-14;
+
+      background: #ffffff;
+      border: 1px solid #21407d1c;
+      border-radius: 8px;
+      color: $color-dark-blue;
+      font-weight: 400;
+      height: 40px;
+      padding: 12px 20px;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid #21407d51;
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }
+
+  &__date {
+    margin-bottom: 20px;
+
+    label {
+      @extend %font-14;
+
+      color: $color-dark-blue;
+      display: inline-block;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    &-picker {
+      border-radius: 8px;
+      height: 40px;
+      width: 100%;
+    }
+  }
+}
+
+.filter__dropdown__button {
+  display: flex;
+  justify-content: space-between;
+
+  &-reset,
+  &-filter {
+    @extend %font-14;
+
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    height: 40px;
+    width: 90px;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.97);
+      transition: transform 0.3s;
+    }
+  }
+
+  &-reset {
+    background-color: $color-white;
+    border: 1px solid #545f7d;
+    color: $color-faded-blue;
+  }
+
+  &-filter {
+    background-color: $color-sky-blue;
+    border: 1px solid #39cdcc;
+    color: $color-white;
+  }
+}
