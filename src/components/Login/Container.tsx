@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from 'react'
-import Logo from '../../assets/images/logo.svg'
+import { Logo } from 'components/contants/assets'
+import { FC, ReactNode } from 'react'
 
 interface IProps {
   children: ReactNode

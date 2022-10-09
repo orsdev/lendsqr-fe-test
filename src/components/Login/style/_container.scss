@@ -5,6 +5,11 @@
   height: 100%;
   min-height: 100vh;
   position: relative;
+
+  @include media('base', '<') {
+    align-items: flex-start;
+    padding-top: 50px;
+  }
 }
 
 .login__container__content {
@@ -26,7 +31,7 @@
 .login__container__image {
   height: 36px;
   margin-bottom: 100px;
-  width: 173.76px;
+  width: clamp(120px, 20vw, 173px);
 
   @include media('xs', '<') {
     margin-bottom: 60px;
