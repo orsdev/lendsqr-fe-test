@@ -7,6 +7,7 @@ import { AppContextProvider } from 'context/combineContexts'
 import Users from 'pages/Users/Users'
 import { AxiosRequestConfig } from 'axios'
 import api from 'api/axios'
+import NotFound from 'pages/404'
 
 // Create a client
 const queryClient = new QueryClient()
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/users" element={<Users />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AppContextProvider>
       </div>
