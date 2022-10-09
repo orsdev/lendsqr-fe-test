@@ -98,7 +98,9 @@ const UsersTable = () => {
             className="users__table--td users__table--td-button users__table--td-navigate"
             onClick={() => {
               navigate(
-                '/dashboard/users/details?id=' + encodeURIComponent(record.id)
+                `/dashboard/users/details/${encodeURIComponent(
+                  record.id
+                )}/general`
               )
             }}
           >
@@ -205,8 +207,9 @@ const UsersTable = () => {
                           className="users__table__action__item"
                           onClick={() => {
                             navigate(
-                              '/dashboard/users/details?id=' +
-                                encodeURIComponent(record.id)
+                              `/dashboard/users/details/${encodeURIComponent(
+                                record.id
+                              )}/general`
                             )
                           }}
                         >
