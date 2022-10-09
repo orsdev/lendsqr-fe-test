@@ -31,3 +31,30 @@ export const StatsInfo = [
     value: 102453
   }
 ]
+
+export const UserDetailsRoute = [
+  {
+    title: 'General Details',
+    pathname: 'general'
+  },
+  {
+    title: 'Documents',
+    pathname: 'documents'
+  },
+  {
+    title: 'Bank Details',
+    pathname: 'bank'
+  },
+  {
+    title: 'Loans',
+    pathname: 'loans'
+  },
+  {
+    title: 'Savings',
+    pathname: 'savings'
+  },
+  {
+    title: 'App and System',
+    pathname: 'app-and-system'
+  }
+]

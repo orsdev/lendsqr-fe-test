@@ -8,6 +8,8 @@ import Users from 'pages/Users/Users'
 import { AxiosRequestConfig } from 'axios'
 import api from 'api/axios'
 import NotFound from 'pages/404'
+import Details from 'pages/Users/Details/Details'
+import General from 'components/Users/Details/General/Index'
 
 // Create a client
 const queryClient = new QueryClient()
@@ -26,6 +28,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/users" element={<Users />} />
+            <Route path="/dashboard/users/details/:id" element={<Details />}>
+              <Route path="general" element={<General />} />
+            </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AppContextProvider>

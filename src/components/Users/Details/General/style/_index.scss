@@ -1,0 +1,46 @@
+.users__general {
+  background-color: $color-white;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  margin-top: 40px;
+  padding: 30px;
+
+  &__title {
+    @extend %font-16;
+
+    font-weight: 500;
+    color: $color-dark-blue;
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    @extend %font-12;
+
+    font-weight: 400;
+    color: $color-faded-blue;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    @extend %font-14;
+
+    font-weight: 500;
+    color: $color-faded-blue;
+    max-width: 150px;
+    word-break: break-all;
+
+    @include media('xs', '<') {
+      max-width: 100%;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(167px, 1fr));
+    margin-bottom: 30px;
+    row-gap: 30px;
+  }
+}

@@ -77,6 +77,11 @@ const Sidebar = () => {
                   'sidebar__navigation__list__active sidebar__navigation__list--selected',
                 'sidebar__navigation__list'
               )}
+              onClick={() => {
+                if (showSidebar) {
+                  setShowSidebar(false)
+                }
+              }}
             >
               <Link to="/dashboard">
                 <span className="sidebar__navigation__link">
@@ -98,6 +103,11 @@ const Sidebar = () => {
                   'sidebar__navigation__list'
                 )}
                 key={title}
+                onClick={() => {
+                  if (showSidebar) {
+                    setShowSidebar(false)
+                  }
+                }}
               >
                 <Link to={route}>
                   <span className="sidebar__navigation__link">
@@ -120,6 +130,11 @@ const Sidebar = () => {
                   'sidebar__navigation__list'
                 )}
                 key={title}
+                onClick={() => {
+                  if (showSidebar) {
+                    setShowSidebar(false)
+                  }
+                }}
               >
                 <Link to={route}>
                   <span className="sidebar__navigation__link">
@@ -142,6 +157,11 @@ const Sidebar = () => {
                   'sidebar__navigation__list'
                 )}
                 key={title}
+                onClick={() => {
+                  if (showSidebar) {
+                    setShowSidebar(false)
+                  }
+                }}
               >
                 <Link to={route}>
                   <span className="sidebar__navigation__link">
