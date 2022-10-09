@@ -35,6 +35,12 @@ import Prev from '../../assets/icons/prev.png'
 import Next from '../../assets/icons/next.png'
 import ArrowDown from '../../assets/icons/down.png'
 
+import Eye from '../../assets/icons/eye.png'
+import UserCancel from '../../assets/icons/user-cancel.png'
+import UserVerify from '../../assets/icons/user-verify.png'
+
+import Filter from '../../assets/icons/filter.png'
+
 export {
   ArrowDown,
   AvatarSM,
@@ -46,6 +52,8 @@ export {
   CoinOverlay,
   Coins,
   Division,
+  Eye,
+  Filter,
   Galaxy,
   Group,
   GroupOverlay,
@@ -60,10 +68,12 @@ export {
   Savings,
   Shake,
   Transactions,
+  UserCancel,
   UserCheck,
   UserCog,
   UserMinus,
   Users,
   UsersOverlay,
+  UserVerify,
   Scroll
 }
