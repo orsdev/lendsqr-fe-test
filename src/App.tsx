@@ -23,6 +23,7 @@ function App() {
         <AppContextProvider>
           <Routes>
             <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/users" element={<Users />} />
             <Route path="*" element={<NotFound />} />
