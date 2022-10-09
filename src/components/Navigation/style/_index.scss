@@ -67,6 +67,10 @@
       display: flex;
     }
 
+    @include media('md', '>') {
+      margin-left: 30px;
+    }
+
     input {
       @extend %font-14;
 
@@ -103,6 +107,11 @@
       justify-content: center;
       outline: none;
       width: 56px;
+      transition: transform 0.1s;
+
+      &:active {
+        transform: scale(0.99);
+      }
 
       i {
         @extend %font-14;
