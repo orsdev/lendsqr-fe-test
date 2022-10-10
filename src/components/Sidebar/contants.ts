@@ -17,7 +17,8 @@ import {
   UserCheck,
   UserCog,
   UserMinus,
-  Users
+  Users,
+  Wheel
 } from 'components/contants/assets'
 
 export const CustomersMenuNavigation = [
@@ -126,5 +127,10 @@ export const SettingsMenuNavigation = [
     icon: Log,
     title: 'Audit Logs',
     route: '/dashboard/audit-logs'
+  },
+  {
+    icon: Wheel,
+    title: 'Systems Messages',
+    route: '/dashboard/system-messages'
   }
 ]

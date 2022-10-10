@@ -7,7 +7,8 @@ import {
   CustomersMenuNavigation,
   SettingsMenuNavigation
 } from './contants'
-import { Briefcase, Home, Logo } from 'components/contants/assets'
+import { Briefcase, Home, Logo, SignOut } from 'components/contants/assets'
+import { Divider } from 'antd'
 
 const activeNavigation = (pathname: string, route: string) =>
   pathname.includes(route)
@@ -171,6 +172,33 @@ const Sidebar = () => {
                 </Link>
               </li>
             ))}
+          </ul>
+
+          <Divider
+            style={{
+              margin: '20px 0',
+              marginBottom: '5px'
+            }}
+          />
+
+          {/* Log out */}
+          <ul className="sidebar__navigation__ul">
+            <li
+              className="sidebar__navigation__list"
+              style={{
+                opacity: 1
+              }}
+            >
+              <span
+                className="sidebar__navigation__link"
+                style={{
+                  color: '#213F7D'
+                }}
+              >
+                <img src={SignOut} alt="Icon" />
+                <span className="inline-block">Logout</span>
+              </span>
+            </li>
           </ul>
         </div>
       </div>
