@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Lendsqr Front-end Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Lendsqr Front-end engineering assessment documentation.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Installs the project dependencies.
 
 ### `npm start`
 
@@ -29,42 +33,29 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [Create React App](https://github.com/facebook/create-react-app).
+- [Axios](https://axios-http.com/docs/intro)
+- [React Query](https://tanstack.com/query/v4/docs/overview)
+- [Ant Design](https://ant.design/docs/react/introduce)
+- [Typescript](https://www.typescriptlang.org/)
+- [SCSS](https://www.typescriptlang.org/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Production Link
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[Lendsqr](https://ogundare-samuel-lendsqr-fe-test.vercel.app/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Here are some screenshots from this application
 
-## Learn More
+#### Login
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Lendsqr Login Screen](https://res.cloudinary.com/osdev/image/upload/v1665378384/login_ob4urw.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Users
 
-### Code Splitting
+![Lendsqr Login Screen](https://res.cloudinary.com/osdev/image/upload/v1665378655/Lendsqr___Empowering_the_smartest_lenders_-_Brave_10_10_2022_6_09_43_AM_ljri6k.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Details
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Lendsqr Login Screen](https://res.cloudinary.com/osdev/image/upload/v1665376513/user_details_gahfbv.png)
