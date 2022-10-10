@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import * as Yup from 'yup'
 import { useFormik } from 'formik'
 import cn from 'clsx'
@@ -14,6 +14,12 @@ const ValidationSchema = Yup.object({
 const LoginForm = () => {
   const navigate = useNavigate()
   const [inputType, setInputType] = useState<'password' | 'text'>('password')
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scroll(0, 10)
+    }
+  }, [])
 
   const formik = useFormik({
     initialValues: {
