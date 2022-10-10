@@ -25,6 +25,8 @@ import Bar from '../../assets/icons/bar.png'
 import Preferences from '../../assets/icons/preferences.png'
 import Division from '../../assets/icons/division.png'
 import Log from '../../assets/icons/log.png'
+import Wheel from '../../assets/icons/wheel.png'
+import SignOut from '../../assets/icons/sign-out.png'
 
 import UsersOverlay from '../../assets/icons/users-overlay.png'
 import GroupOverlay from '../../assets/icons/group-overlay.png'
@@ -75,5 +77,7 @@ export {
   Users,
   UsersOverlay,
   UserVerify,
-  Scroll
+  Scroll,
+  SignOut,
+  Wheel
 }
