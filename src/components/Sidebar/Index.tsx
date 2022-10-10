@@ -1,5 +1,5 @@
 import { useSidebarContext } from 'context/sidebar'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import cn from 'clsx'
 import SwitchOrganization from './SwitchOrganization'
 import {
@@ -14,6 +14,7 @@ const activeNavigation = (pathname: string, route: string) =>
   pathname.includes(route)
 
 const Sidebar = () => {
+  const navigate = useNavigate()
   const { showSidebar, setShowSidebar } = useSidebarContext()
   const { pathname } = useLocation()
 
@@ -188,6 +189,7 @@ const Sidebar = () => {
               style={{
                 opacity: 1
               }}
+              onClick={() => navigate('/login')}
             >
               <span
                 className="sidebar__navigation__link"

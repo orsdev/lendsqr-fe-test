@@ -1,9 +1,10 @@
 import { Dropdown } from 'antd'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AvatarSM, Bell, Logo } from 'components/contants/assets'
 import { useSidebarContext } from 'context/sidebar'
 
 const Navigation = () => {
+  const navigate = useNavigate()
   const { setShowSidebar } = useSidebarContext()
 
   return (
@@ -87,7 +88,11 @@ const Navigation = () => {
                 <div>
                   <hr />
                 </div>
-                <button className="navigation__dropdown__item" key="logoff">
+                <button
+                  className="navigation__dropdown__item"
+                  key="logoff"
+                  onClick={() => navigate('/login')}
+                >
                   <i className="fas fa-sign-out-alt" />
                   <span
                     style={{
