@@ -41,6 +41,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - [Ant Design](https://ant.design/docs/react/introduce)
 - [Typescript](https://www.typescriptlang.org/)
 - [SCSS](https://www.typescriptlang.org/)
+- [Vercel](https://vercel.com/)
 
 ## Production Link
 
