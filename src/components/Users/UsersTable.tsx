@@ -1,4 +1,4 @@
-import { Button, Dropdown, Menu, Table } from 'antd'
+import { Button, Dropdown, Menu, Table, Tooltip } from 'antd'
 import { ColumnsType } from 'antd/lib/table'
 import {
   ArrowDown,
@@ -29,7 +29,18 @@ const UsersTable = () => {
   const users = data ?? []
 
   const onFilters = () => ({
-    filterIcon: () => <img src={Filter} alt="Filter" />,
+    filterIcon: () => (
+      <Tooltip title="Filter">
+        <img
+          src={Filter}
+          alt="Filter"
+          style={{
+            width: '14px',
+            height: '14px'
+          }}
+        />
+      </Tooltip>
+    ),
     filterDropdown: (
       <FilterDropdown
         organizations={users}
