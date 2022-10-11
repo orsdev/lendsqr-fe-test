@@ -249,7 +249,7 @@ const UsersTable = () => {
                 >
                   <div>
                     <button>
-                      <i className="fa fa-ellipsis-h" aria-hidden="true" />
+                      <i className="fa fa-ellipsis-v" aria-hidden="true" />
                     </button>
                   </div>
                 </Dropdown>
