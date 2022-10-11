@@ -78,7 +78,7 @@ export const BusinessesMenuNavigation = [
   {
     icon: Bank,
     title: 'Savings Products',
-    route: '/dashboard/savings-products'
+    route: '/dashboard/products-savings'
   },
   {
     icon: Coins,
