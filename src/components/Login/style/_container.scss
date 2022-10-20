@@ -15,12 +15,12 @@
 .login__container__content {
   min-height: 100%;
   position: relative;
-  padding: 40px 100px;
-  padding-bottom: 230px;
+  padding: 30px 100px;
+  padding-bottom: 40px;
   width: 100%;
 
   @include media('1150', '<') {
-    padding: 40px 50px;
+    padding: 40px;
   }
 
   @include media('xs', '<') {
@@ -29,13 +29,10 @@
 }
 
 .login__container__image {
+  position: relative;
+  top: -30px;
   height: 36px;
-  margin-bottom: 100px;
   width: clamp(120px, 20vw, 173px);
-
-  @include media('xs', '<') {
-    margin-bottom: 60px;
-  }
 
   img {
     width: 100%;
