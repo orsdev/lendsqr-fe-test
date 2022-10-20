@@ -39,7 +39,7 @@
   &__grid {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(167px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(167px, 167px));
     margin-bottom: 30px;
     row-gap: 30px;
   }
